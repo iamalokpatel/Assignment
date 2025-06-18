@@ -5,6 +5,7 @@ import cors from "cors";
 
 // Route Imports
 import authRoutes from "./routes/authRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
 
 dotenv.config();
 const app = express();
@@ -15,6 +16,7 @@ app.use(express.json());
 
 // API Routes
 app.use("/api/auth", authRoutes);
+app.use("/api/users", userRoutes);
 
 // MongoDB & Server
 const PORT = process.env.PORT || 5000;
